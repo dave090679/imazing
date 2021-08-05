@@ -17,6 +17,16 @@ class imazingdeviceinfobuttonitem(uia.ListItem):
 			if x.role == controlTypes.ROLE_BUTTON:
 				l.append(x.description)
 		return " ".join(l);
+class imazingdeviceinfoitem(uia.ListItem):
+	def _get_name(self):
+		l = list()
+		for x in self.children:
+			if x.role == controlTypes.ROLE_STATICTEXT:
+				l.append(x.name)
+			elif x.role == controlTypes.ROLE_GRAPHIC:
+				l.append(x.description)
+		return " ".join(l);
+
 class remainingunlabeleduiaitem(uia.UIA):
 	def _get_name(self):
 		s = '';
@@ -43,6 +53,8 @@ class AppModule(appModuleHandler.AppModule):
 	def chooseNVDAObjectOverlayClasses(self, obj, clslist):
 		if obj.role == controlTypes.ROLE_TREEVIEWITEM and obj.name == "IMazing.Sidebar.SidebarItem":
 			clslist.insert(0, imazingtreeviewitem)
+		elif obj.role == controlTypes.ROLE_LISTITEM and obj.name in ["IMazing.Shared.DeviceInfoDetailItem", "IMazing.Popover.MiniDeviceItem"]:
+			clslist.insert(0, imazingdeviceinfoitem)
 		elif obj.role == controlTypes.ROLE_LISTITEM and obj.name == "IMazing.Datasets.DeviceInfo.DeviceInfoButtonItem":
 			clslist.insert(0, imazingdeviceinfobuttonitem)
 		elif obj.role == controlTypes.ROLE_LISTITEM and obj.name in ["IMazing.StartWindow.StartWindowItem", "IMazing.Popover.DeviceItem", "IMazing.Wizards.Options.OptionsWizardItem", "IMazing.StartWindow.StartWindowDeviceItem", "IMazing.Wizards.QuickTransfer.CompatibleAppItem"]:

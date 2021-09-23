@@ -20,7 +20,7 @@ addon_info = {
 	"addon_description" : _("""Description for the add-on.
 It can span multiple lines."""),
 	# version
-	"addon_version" : "0.8",
+	"addon_version" : "0.9",
 	# Author(s)
 	"addon_author" : u"David Parduhn <xkill85@gmx.net>",
 	# URL for the add-on documentation support

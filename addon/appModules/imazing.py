@@ -88,7 +88,7 @@ class AppModule(appModuleHandler.AppModule):
 			clslist.insert(0, imazingtreeviewitem)
 		elif obj.role == controlTypes.ROLE_LISTITEM and obj.name == "IMazing.Datasets.DeviceInfo.DeviceInfoButtonItem":
 			clslist.insert(0, imazingdeviceinfobuttonitem)
-		elif obj.role == controlTypes.ROLE_LISTITEM and obj.name in ["IMazing.Wizards.Options.OptionsWizardItem", "IMazing.Shared.DeviceInfoDetailItem", "IMazing.Shared.OperationItem", "IMazing.BackupHistory.BackupHistoryItemDevice", "IMazing.BackupHistory.BackupHistoryItemArchive", "IMazing.Wizards.QuickTransfer.CompatibleAppItem"]:
+		elif obj.role == controlTypes.ROLE_LISTITEM and obj.name in ["IMazing.Shared.BackupLocationItem", "IMazing.Wizards.Options.OptionsWizardItem", "IMazing.Shared.DeviceInfoDetailItem", "IMazing.Shared.OperationItem", "IMazing.BackupHistory.BackupHistoryItemDevice", "IMazing.BackupHistory.BackupHistoryItemArchive", "IMazing.Wizards.QuickTransfer.CompatibleAppItem"]:
 			clslist.insert(0, imazingOptionsWizardItem)
 		elif obj.role == controlTypes.ROLE_DATAITEM and obj.name == "IMazing.Datasets.WhatsApp.WhatsAppMessageDisplayItem":
 			clslist.insert(0,imazingwhatsappmessagedisplayitem)

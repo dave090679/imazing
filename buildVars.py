@@ -20,14 +20,14 @@ addon_info = {
 	"addon_description" : _("""Description for the add-on.
 It can span multiple lines."""),
 	# version
-	"addon_version" : "0.9",
+	"addon_version" : "0.10",
 	# Author(s)
 	"addon_author" : u"David Parduhn <xkill85@gmx.net>",
 	# URL for the add-on documentation support
 	"addon_url" : None,
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
-	"lastTestedNVDAVersion": "2021.1"
+	"lastTestedNVDAVersion": "2022.1"
 }
 
 

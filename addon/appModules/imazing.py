@@ -81,6 +81,9 @@ class imazingcomboboxitem(uia.ListItem):
 	def _get_name(self):
 		return self.firstChild.children[1].name
 
+class imazingl10nitem(uia.ListItem):
+	def _get_name(self):
+		return self.firstChild.name
 
 class AppModule(appModuleHandler.AppModule):
 	def chooseNVDAObjectOverlayClasses(self, obj, clslist):
@@ -104,5 +107,7 @@ class AppModule(appModuleHandler.AppModule):
 			clslist.insert(0,imazingddnacalendar)
 		elif obj.role == controlTypes.ROLE_LISTITEM and obj.name == "System.Windows.Controls.ListBoxItem":
 			clslist.insert(0,imazingcomboboxitem)
+		elif obj.role == controlTypes.ROLE_LISTITEM and obj.name in ["IMazing.Helpers.ISOCountry", "IMazing.Helpers.ISOLanguage"]:
+			clslist.insert(0,imazingl10nitem)
 		elif obj.name == "":
 			clslist.insert(0,remainingunlabeleduiaitem)

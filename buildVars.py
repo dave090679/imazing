@@ -17,10 +17,10 @@ addon_info = {
 	"addon_summary" : _("imazing"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description" : _("""Description for the add-on.
-It can span multiple lines."""),
+	"addon_description" : _("""improve accessibility of the itunes alternative imazing
+"""),
 	# version
-	"addon_version" : "0.12",
+	"addon_version" : "0.13",
 	# Author(s)
 	"addon_author" : u"David Parduhn <xkill85@gmx.net>",
 	# URL for the add-on documentation support
